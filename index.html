@@ -5,32 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Полезный код на github</title>    
-	<base href="https://da41b94c.github.io/">	
-    <link rel="stylesheet" href="inc/css/bootstrap.min.css">    
+	<base href="https://da41b94c.github.io/">	    
     <link rel="stylesheet" href="inc/css/core.css">
 	<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
+	<div class="matrix"></div>
 	<header>
-		<img src="inc/img/logo.svg" alt="Полезный код на github" class="logo">
+		<a href="https://da41b94c.github.io/">
+			<img src="inc/img/logo.svg" alt="Полезный код на github" class="logo">
+		</a>
 	</header>
 	<div class="container">
-		<div class="row mt-5">
-			<div class="col  text-center">
-				<div class="p-5 border bg-light">
-					<p>Посетите наш основной сайт и Telegram-канал для полезных заметок по веб-разработке:</p>
-					<a href="https://developer.donnoval.ru/" target="_blank">
-						<img src="https://img.icons8.com/ios-filled/24/ffffff/home.png" class="icon" alt="Главный сайт"/> Полезный код - Главный сайт
-					</a>
-					<a href="https://t.me/helpfulcode" target="_blank">
-						<img src="https://img.icons8.com/ios-filled/24/ffffff/telegram-app.png" class="icon" alt="Telegram-канал"/> Полезный код - Telegram-канал
-					</a>
-				</div>
-			</div>
-			<div class="col text-center">
-				<div class="p-5 border bg-light">Knock-Knock</div>
-			</div>
+		<div class="row">			
+			<p>Посетите наш основной сайт и Telegram-канал для полезных заметок по веб-разработке:</p>
+			<a href="https://developer.donnoval.ru/" target="_blank" class="link">
+				<img src="inc/img/home.png" class="icon" alt="Главный сайт"/>Главный сайт
+			</a>
+			<a href="https://t.me/helpfulcode" target="_blank" class="link">
+				<img src="inc/img/telegram-app.png" class="icon" alt="Telegram-канал"/>Telegram-канал
+			</a>							
+			<p>Публикуем качественные и полезные сниппеты кода <br>для веб-разработчиков, делая вашу работу эффективнее и приятнее.</p>												
 		</div>
 	</div>
+	<footer>	
+		<p class="caduceus">☤</p>	
+	</footer>	
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const matrix = document.querySelector('.matrix');
+			const symbols = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:",.<>?/`~');
+			const createRain = () => {
+				const span = document.createElement('span');
+				span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+				span.style.left = `${Math.random() * 100}vw`;
+				span.style.animationDuration = `${Math.random() * 2 + 3}s`;
+				matrix.appendChild(span);
+
+				const changeSymbol = () => {
+					span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+				};
+
+				const interval = setInterval(changeSymbol, 100);
+				span.addEventListener('animationend', () => {
+					clearInterval(interval);
+					span.remove();
+				});
+			};
+			setInterval(createRain, 100);
+		});
+	</script>
 </body>
 </html>

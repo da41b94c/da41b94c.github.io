@@ -1,23 +1,34 @@
 * {
-	font-size:14px;
-	line-height:18px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	font-size:16px;
+	line-height:22px;
 }
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f0f0f0;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+	font-family: 'Courier New', Courier, monospace;
+    background-color: #001206;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; 
+	color:#b8ffd0;	
 }
-.container {
-	background-color: #ffffff;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container {		
 	text-align: center;
+	animation: fadeIn 2s ease-in-out;	
+	z-index: 10;
+    max-width: 600px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #b8ffd0;    
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
 }
 h1 {
 	color: #333333;
@@ -25,17 +36,90 @@ h1 {
 a {
 	display: block;
 	margin: 10px 0;
-	color: #1a73e8;
+	color: #b8ffd0;
 	text-decoration: none;
 }
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	border-color:#ffff00;
+	color:#b8ffd0
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b8ffd0;
+    margin: 30px 0;
+	color:#ffff00;
 }
 header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
 .logo{
 	max-width:200px;
+}
+.icon{
+	padding:7px;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+footer{
+	padding:20px 0;
+}
+.caduceus{
+	font-size:40px;
+}
+
+@keyframes rain {
+	0% {
+		top: -100%;
+		color: #b8ffd0;
+	}
+	50% {
+		color: #ffff00;
+	}
+	100% {
+		top: 100%;
+		color: #001206;
+	}
+}
+.matrix {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+.matrix span {
+	position: absolute;
+	top: -100%;
+	font-size: 18px;
+	color: #b8ffd0;
+	white-space: nowrap;
+	user-select: none;
+	animation: rain 5s linear infinite;
+}
+
+@media screen and (max-width:600px){
+	*{
+	font-size:14px;
+	line-height:20px;
+	}
+	.container {	
+	max-width:90%;
+	padding: 20px;		
+	}	
+	.link{
+		margin:15px 0;
+	}
 }
