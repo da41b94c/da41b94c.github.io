@@ -1,36 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Полезный код на github</title>    
-	<base href="https://da41b94c.github.io/">	    
-    <link rel="stylesheet" href="inc/css/core.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Полезный код — заметки и решения для веб-разработчиков</title>
+	<meta name="description" content="Сниппеты, инструкции и практические заметки по веб-разработке без длинных вступлений и лишней теории.">
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#001206">
+	<link rel="canonical" href="https://da41b94c.github.io/">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:site_name" content="Полезный код">
+	<meta property="og:title" content="Полезный код — заметки и решения для веб-разработчиков">
+	<meta property="og:description" content="Сниппеты, инструкции и практические заметки по веб-разработке.">
+	<meta property="og:url" content="https://da41b94c.github.io/">
+	<meta name="twitter:card" content="summary">
+	<link rel="stylesheet" href="inc/css/core.css">
 	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<script src="inc/js/matrix.js" defer></script>
 </head>
 <body>
-	<div class="matrix"></div>
-	<header>
-		<a href="https://da41b94c.github.io/">
-			<img src="inc/img/logo.svg" alt="Полезный код на github" class="logo">
+	<a class="skip-link" href="#MainContent">Перейти к содержанию</a>
+	<div class="matrix" aria-hidden="true"></div>
+
+	<header class="site-header">
+		<a class="brand" href="/" aria-label="Полезный код — главная страница">
+			<img src="inc/img/logo.svg" width="240" height="69" alt="Полезный код" class="logo">
 		</a>
 	</header>
-	<div class="container">
-		<div class="row">			
-			<p>Посетите наш основной сайт и Telegram-канал для полезных заметок по веб-разработке:</p>
-			<a href="https://developer.donnoval.ru/" target="_blank" class="link">
-				<img src="inc/img/home.png" class="icon" alt="Главный сайт"/>Главный сайт
-			</a>
-			<a href="https://t.me/helpfulcode" target="_blank" class="link">
-				<img src="inc/img/telegram-app.png" class="icon" alt="Telegram-канал"/>Telegram-канал
-			</a>							
-			<p>Публикуем качественные и полезные сниппеты кода <br>для веб-разработчиков, делая вашу работу эффективнее и приятнее.</p>												
-		</div>
-	</div>
-	<footer>	
-		<p class="caduceus">☤</p>	
-	</footer>	
-<script src="inc/js/matrix.js"></script>		
+
+	<main id="MainContent" class="site-main">
+		<section class="hero" aria-labelledby="PageTitle">
+			<p class="eyebrow">// материалы для веб-разработки</p>
+			<h1 id="PageTitle">Код, который помогает быстрее решать рабочие задачи</h1>
+			<p class="lead">Сниппеты, инструкции и практические заметки по веб-разработке — без длинных вступлений и лишней теории.</p>
+
+			<div class="actions">
+				<a class="button button--primary" href="https://developer.donnoval.ru/" target="_blank" rel="noopener noreferrer">
+					<svg viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M12 3 2.5 11h2v9h6v-6h3v6h6v-9h2L12 3Z" fill="currentColor"/>
+					</svg>
+					<span>Открыть основной сайт</span>
+				</a>
+
+				<a class="button button--secondary" href="https://t.me/helpfulcode" target="_blank" rel="noopener noreferrer">
+					<svg viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M21.4 3.6 18.2 19c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9-8.2c.4-.4-.1-.6-.6-.2L5.8 12.8 1 11.3c-1-.3-1.1-1 .2-1.5L20 2.6c.9-.3 1.7.2 1.4 1Z" fill="currentColor"/>
+					</svg>
+					<span>Читать Telegram-канал</span>
+				</a>
+			</div>
+
+			<ul class="topics" aria-label="Что публикуем">
+				<li>
+					<span class="topic-number" aria-hidden="true">01</span>
+					<strong>Сниппеты</strong>
+					<span>Готовые фрагменты кода для типовых задач.</span>
+				</li>
+				<li>
+					<span class="topic-number" aria-hidden="true">02</span>
+					<strong>Инструкции</strong>
+					<span>Короткие разборы настройки и разработки.</span>
+				</li>
+				<li>
+					<span class="topic-number" aria-hidden="true">03</span>
+					<strong>Обновления</strong>
+					<span>Новые материалы и полезные находки в Telegram.</span>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p><span aria-hidden="true">◆</span> Полезный код · <a href="https://github.com/da41b94c/da41b94c.github.io" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+	</footer>
 </body>
 </html>
